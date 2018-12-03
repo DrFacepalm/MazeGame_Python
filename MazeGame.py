@@ -18,7 +18,6 @@ current_steps = None # Refers to the current remaining steps
 current_gold = None # Refers to the amount of gold collected
 
 
-
 def init_game(configFile):
     global file
     global num_lives
@@ -44,7 +43,6 @@ def init_game(configFile):
     num_steps = int(num_steps)
     num_gold = int(num_gold)
     num_rows = int(num_rows)
-    #print(f"{num_lives}, {num_steps}, {num_gold}, {num_rows}")
 
     grid = []
     for i in range(num_rows):
