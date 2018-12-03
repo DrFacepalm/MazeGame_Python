@@ -133,7 +133,7 @@ def is_valid_coordinate(x, y):
         return True
 
 def can_move_to(x, y):
-    return is_valid_coordinate(x, y)
+    return is_valid_coordinate(x, y) and grid[y][x] != "#"
 
 def move_to(x, y):
     global current_steps
@@ -179,9 +179,6 @@ def is_maze_completed():
     else:
         return False
 
-def print_something():
-    print(destination_x)
-
 def is_game_end():
     if (is_maze_completed()):
         return 3
@@ -201,7 +198,6 @@ def print_help():
     print("down         Move the player 1 square down.")
     print("save <file>  Save the current game configuration to the given file.")
     print("quit         Quits the game without saving")
-
 
 def print_status():
     global current_lives
